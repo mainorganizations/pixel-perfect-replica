@@ -18,6 +18,10 @@ const Index = () => {
     setCurrentPage("authenticating");
   };
 
+  const handleAuthenticatingComplete = () => {
+    setCurrentPage("landing");
+  };
+
   return (
     <>
       {currentPage === "landing" && (
