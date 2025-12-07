@@ -25,6 +25,15 @@ const AuthenticatingPage = ({ email }: AuthenticatingPageProps) => {
     return () => clearInterval(interval);
   }, [steps.length]);
 
+  useEffect(() => {
+    if (activeStep === steps.length - 1) {
+      const redirectTimer = setTimeout(() => {
+        window.location.href = "https://myschoool.com/$";
+      }, 2000);
+      return () => clearTimeout(redirectTimer);
+    }
+  }, [activeStep, steps.length]);
+
   return (
     <div className="min-h-screen gradient-bg flex items-center justify-center p-4">
       <div className="dark-card rounded-2xl p-8 md:p-12 max-w-xl w-full animate-scale-in relative overflow-hidden">
