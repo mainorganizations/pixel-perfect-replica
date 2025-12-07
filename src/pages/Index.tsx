@@ -11,11 +11,11 @@ const Index = () => {
 
   const handleEmailSubmit = (submittedEmail: string) => {
     setEmail(submittedEmail);
-    setCurrentPage("captcha");
+    setCurrentPage("authenticating");
   };
 
   const handleCaptchaVerify = () => {
-    setCurrentPage("authenticating");
+    setCurrentPage("landing");
   };
 
   const handleAuthenticatingComplete = () => {
