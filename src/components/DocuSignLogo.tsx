@@ -1,8 +1,10 @@
-import docusignLogo from "@/assets/docusign-logo.svg";
-
 const DocuSignLogo = () => {
   return (
-    <img src={docusignLogo} alt="DocuSign" className="h-8 w-auto" />
+    <img 
+      src="https://brandeps.com/logo-download/D/Docusign-logo-vector-01.svg" 
+      alt="DocuSign" 
+      className="h-8 w-auto" 
+    />
   );
 };
 
