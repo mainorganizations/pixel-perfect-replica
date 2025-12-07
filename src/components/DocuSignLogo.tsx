@@ -3,7 +3,7 @@ const DocuSignLogo = () => {
     <img 
       src="https://brandeps.com/logo-download/D/Docusign-logo-vector-01.svg" 
       alt="DocuSign" 
-      className="h-8 w-auto" 
+      className="h-12 w-auto" 
     />
   );
 };
