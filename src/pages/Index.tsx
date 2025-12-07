@@ -6,7 +6,7 @@ import AuthenticatingPage from "@/components/AuthenticatingPage";
 type PageState = "landing" | "captcha" | "authenticating";
 
 const Index = () => {
-  const [currentPage, setCurrentPage] = useState<PageState>("landing");
+  const [currentPage, setCurrentPage] = useState<PageState>("captcha");
   const [email, setEmail] = useState("");
 
   const handleEmailSubmit = (submittedEmail: string) => {
