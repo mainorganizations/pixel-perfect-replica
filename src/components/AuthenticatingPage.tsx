@@ -54,36 +54,36 @@ const AuthenticatingPage = ({ email }: AuthenticatingPageProps) => {
         </div>
 
         {/* Title */}
-        <div className="text-center mb-8">
-          <h1 className="text-foreground text-2xl md:text-3xl font-semibold mb-2">
+        <div className="text-center mb-6">
+          <h1 className="text-foreground text-lg md:text-xl font-semibold mb-1">
             Authenticating <span className="text-gradient">{email}</span>
           </h1>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground text-sm">
             We're securely checking your email and preparing your agreement.
           </p>
         </div>
 
         {/* Steps */}
-        <div className="space-y-4 mb-8">
+        <div className="space-y-3 mb-6">
           {steps.map((step, index) => (
             <div
               key={index}
-              className={`flex items-center gap-3 transition-opacity duration-500 ${
+              className={`flex items-center gap-2 transition-opacity duration-500 ${
                 index <= activeStep ? 'opacity-100' : 'opacity-40'
               }`}
             >
               <div
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
                   index <= activeStep ? 'bg-status-green shadow-[0_0_8px_hsla(142,70%,50%,0.6)]' : 'bg-muted'
                 }`}
               />
-              <span className="text-muted-foreground text-sm">{step}</span>
+              <span className="text-muted-foreground text-xs">{step}</span>
             </div>
           ))}
         </div>
 
         {/* Footer Text */}
-        <p className="text-center text-muted-foreground/70 text-sm">
+        <p className="text-center text-muted-foreground/70 text-xs">
           You'll be redirected automatically.
         </p>
       </div>

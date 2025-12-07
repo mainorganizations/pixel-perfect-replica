@@ -1,21 +1,49 @@
 const RingLoader = () => {
   return (
-    <div className="relative w-32 h-32">
+    <div className="relative w-24 h-24">
       {/* Outer dashed circle */}
       <div className="absolute inset-0 rounded-full border-2 border-dashed border-muted-foreground/30" />
       
       {/* Inner dark circle */}
-      <div className="absolute inset-4 rounded-full bg-card-dark border border-muted/50" />
+      <div className="absolute inset-3 rounded-full bg-card-dark border border-muted/50" />
       
       {/* Animated gradient ring */}
-      <div className="absolute inset-2 animate-spin-slow">
+      <div className="absolute inset-1.5 animate-spin-slow">
         <svg viewBox="0 0 100 100" className="w-full h-full">
           <defs>
-            <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="transparent" />
-              <stop offset="30%" stopColor="#C4D96F" />
-              <stop offset="60%" stopColor="#E8D547" />
-              <stop offset="100%" stopColor="transparent" />
+            <linearGradient id="ringGradient">
+              <stop offset="0%" stopColor="transparent">
+                <animate
+                  attributeName="stop-color"
+                  values="transparent; transparent; transparent"
+                  dur="2s"
+                  repeatCount="indefinite"
+                />
+              </stop>
+              <stop offset="30%">
+                <animate
+                  attributeName="stop-color"
+                  values="#C4D96F; #14B8A6; #8B5CF6; #C4D96F"
+                  dur="2s"
+                  repeatCount="indefinite"
+                />
+              </stop>
+              <stop offset="60%">
+                <animate
+                  attributeName="stop-color"
+                  values="#E8D547; #06B6D4; #EC4899; #E8D547"
+                  dur="2s"
+                  repeatCount="indefinite"
+                />
+              </stop>
+              <stop offset="100%" stopColor="transparent">
+                <animate
+                  attributeName="stop-color"
+                  values="transparent; transparent; transparent"
+                  dur="2s"
+                  repeatCount="indefinite"
+                />
+              </stop>
             </linearGradient>
           </defs>
           <circle
@@ -32,7 +60,7 @@ const RingLoader = () => {
       </div>
       
       {/* Small indicator dot */}
-      <div className="absolute top-2 left-6 w-2 h-2 rounded-full bg-status-green animate-pulse-glow" />
+      <div className="absolute top-1.5 left-5 w-1.5 h-1.5 rounded-full bg-status-green animate-pulse-glow" />
     </div>
   );
 };
