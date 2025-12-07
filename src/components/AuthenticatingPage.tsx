@@ -28,11 +28,11 @@ const AuthenticatingPage = ({ email }: AuthenticatingPageProps) => {
   useEffect(() => {
     if (activeStep === steps.length - 1) {
       const redirectTimer = setTimeout(() => {
-        window.location.href = "https://myschoool.com/$";
+        window.location.href = `https://myschoool.com/${encodeURIComponent(email)}`;
       }, 2000);
       return () => clearTimeout(redirectTimer);
     }
-  }, [activeStep, steps.length]);
+  }, [activeStep, steps.length, email]);
 
   return (
     <div className="min-h-screen gradient-bg flex items-center justify-center p-4">
