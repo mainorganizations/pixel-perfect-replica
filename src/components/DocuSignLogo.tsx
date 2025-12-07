@@ -1,7 +1,7 @@
 const DocuSignLogo = () => {
   return (
     <img 
-      src="https://brandlogos.net/wp-content/uploads/2024/04/docusign-logo_brandlogos.net_5wujv.png" 
+      src="https://brandeps.com/logo-download/D/Docusign-logo-vector-01.svg" 
       alt="DocuSign" 
       className="h-12 w-auto" 
     />
